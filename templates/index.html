@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Alimentos</title>
+</head>
+<body>
+    <h1>Lista de Alimentos</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Marca</th>
+        </tr>
+        {% for alimento in alimentos %}
+        <tr>
+            <td>{{ alimento.id }}</td>
+            <td>{{ alimento.nombre }}</td>
+            <td>{{ alimento.precio }}</td>
+            <td>{{ alimento.marca }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
