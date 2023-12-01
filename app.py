@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Ruta para mostrar los alimentos desde la base de datos
 @app.route('/')
 def mostrar_alimentos():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('alimentos.sql')
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM alimentos')
     alimentos = cursor.fetchall()
